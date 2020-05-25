@@ -180,12 +180,12 @@ def train(model):
     """Train the model."""
     # Training dataset.
     dataset_train = SoilsampleDataset()
-    dataset_train.load_soilsample(args.dataset, "train_2")
+    dataset_train.load_soilsample(args.dataset, "train")
     dataset_train.prepare()
 
     # Validation dataset
     dataset_val = SoilsampleDataset()
-    dataset_val.load_soilsample(args.dataset, "val_1")
+    dataset_val.load_soilsample(args.dataset, "val")
     dataset_val.prepare()
 
     # *** This training schedule is an example. Update to your needs ***
