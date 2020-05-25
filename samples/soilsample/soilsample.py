@@ -90,7 +90,7 @@ class SoilsampleDataset(utils.Dataset):
         self.add_class("soilsample", 1, "soilsample")
 
         # Train or validation dataset?
-        assert subset in ["train_2", "val_1"]
+        assert subset in ["train", "val"]
         dataset_dir = os.path.join(dataset_dir, subset)
 
         # Load annotations
