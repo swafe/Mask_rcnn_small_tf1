@@ -1,5 +1,5 @@
 """
-Mask R-CNN neuer savhen
+Mask R-CNN
 Train on the toy soilsample dataset and implement color splash effect.
 
 Copyright (c) 2018 Matterport, Inc.
