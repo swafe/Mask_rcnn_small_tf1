@@ -201,7 +201,7 @@ def train(model):
                 learning_rate=config.LEARNING_RATE,
                 epochs=15,
                 layers='heads',
-                augmentation = imgaug.augmenters.Sometimes(5/6,aug.OneOf([ 
+                augmentation = imgaug.augmenters.Sometimes(5/6,imgaug.augmenters.OneOf([ 
                     imgaug.augmenters.Fliplr(1), 
                     imgaug.augmenters.Flipud(1), 
                     imgaug.augmenters.Affine(rotate=(-45, 45)), 
