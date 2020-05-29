@@ -131,7 +131,7 @@ class SoilsampleDataset(utils.Dataset):
             # Unfortunately, VIA doesn't include it in JSON, so we must read
             # the image. This is only managable since the dataset is tiny.
             image_path = os.path.join(dataset_dir, a['filename'])
-            image = skimage.io.imread(image_path)
+            image = skimage.io.imread(image_path, plugin='pil')
             height, width = image.shape[:2]
 
             self.add_image(
@@ -159,10 +159,12 @@ class SoilsampleDataset(utils.Dataset):
         mask = np.zeros([info["height"], info["width"], len(info["polygons"])],
                         dtype=np.uint8)
         for i, p in enumerate(info["polygons"]):
-              
+            if p['name'] == 'rect':
+              p['all_points_y'], p['all_points_x'] = [p['y'], p['y'] + p['height'], p['y'], p['y'] + p['height']], [p['x'], p['x'] + p['width'], p['x'] + p['width'], p['x']]
             # Get indexes of pixels inside the polygon and set them to 1
             rr, cc = skimage.draw.polygon(p['all_points_y'], p['all_points_x'])
             mask[rr, cc, i] = 1
+            
 
         # Return mask, and array of class IDs of each instance. Since we have
         # one class ID only, we return an array of 1s
@@ -193,11 +195,18 @@ def train(model):
     # Since we're using a very small dataset, and starting from
     # COCO trained weights, we don't need to train too long. Also,
     # no need to train all layers, just the heads should do it.
+    import imgaug
     print("Training network heads")
     model.train(dataset_train, dataset_val,
                 learning_rate=config.LEARNING_RATE,
                 epochs=15,
-                layers='heads')
+                layers='heads',
+                augmentation = imgaug.augmenters.Sequential([ 
+                    imgaug.augmenters.Fliplr(1), 
+                    imgaug.augmenters.Flipud(1), 
+                    imgaug.augmenters.Affine(rotate=(-45, 45)), 
+                    imgaug.augmenters.Affine(rotate=(-90, 90)), 
+                    imgaug.augmenters.Affine(scale=(0.5, 1.5))]))
 
 
 def color_splash(image, mask):
