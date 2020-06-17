@@ -38,7 +38,7 @@ Die einzelnen Schritte des Trainings werden im Notebook [train_Mask_rcnn_small_t
 # Testen des trainierten Modells 
 Die einzelnen Schritte werden im Notebook [test_Mask_rcnn_small_tf1_soilsample_model.ipynb.ipynb](test_Mask_rcnn_small_tf1_soilsample_model.ipynb.ipynb) dargestellt und erläutert.
 
-
+![Ergebnis nach Training mit 120 annottierten Bildern](README_Images/result_first_round_detection.png)
 
 
 
