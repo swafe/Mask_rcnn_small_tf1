@@ -45,8 +45,8 @@ Die einzelnen Schritte werden im Notebook [test_Mask_rcnn_small_tf1_soilsample_m
 
 * click [here](https://colab.research.google.com/notebooks/intro.ipynb) to open Google Colab
 * go to File, open notebook
-* go to GitHub and paste 'https://github.com/swafe/Mask_rcnn_small_tf1.git' to enter repository
-* choose test... to open notebook
+* go to GitHub and paste 'https://github.com/swafe/Mask_rcnn_small_tf1.git' to enter the repository
+* choose the test notebook
 * click on the file symbol on left bar 
 * sign in with your g-mail account. Coolab creats a folder 'Colab' in your google drive.
 Now you can run the comands in colab and follow the steps in the notebook
