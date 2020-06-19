@@ -34,7 +34,7 @@ Dieses Repository beinhaltet:
 * test_Mask_rcnn_small_tf1_soilsample_model.ipynb leitet sich von inspect_model.ipynb aus balloon_sample ab. Dieses notebook zeigt die Schritte um Objekte zu detektieren und zu segmentieren. 
 
 # Training mit eigenem Datensatz
-form [Mask RCNN Repository von Matterport](https://github.com/matterport/Mask_RCNN):
+from [Mask RCNN Repository von Matterport](https://github.com/matterport/Mask_RCNN):
 
 Start by reading this [blog post about the balloon color splash sample](https://engineering.matterport.com/splash-of-color-instance-segmentation-with-mask-r-cnn-and-tensorflow-7c761e238b46). It covers the process starting from annotating images to training to using the results in a sample application.
 
