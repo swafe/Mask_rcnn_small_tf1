@@ -59,7 +59,9 @@ Die einzelnen Schritte werden im Notebook [test_Mask_rcnn_small_tf1_soilsample_m
 
 ![Ergebnis nach Training mit 120 annottierten Bildern](README_Images/result_first_round_detection.png)
 
-
+# Preprocessing
+Workflow:
+for workflow see fig.
 
 # Citations 
 @misc{matterport_maskrcnn_2017,
