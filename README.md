@@ -55,7 +55,7 @@ See examples in `samples/shapes/train_shapes.ipynb`, `samples/coco/coco.py`, `sa
 Die einzelnen Schritte des Trainings werden im Notebook [train_Mask_rcnn_small_tf1_soilsample.ipynb](train_Mask_rcnn_small_tf1_soilsample.ipynb) dargestellt und erläutert.
 
 # Testen des trainierten Modells 
-Die einzelnen Schritte werden im Notebook [test_Mask_rcnn_small_tf1_soilsample_model.ipynb.ipynb](test_Mask_rcnn_small_tf1_soilsample_model.ipynb.ipynb) dargestellt und erläutert.
+Die einzelnen Schritte werden im Notebook [test_Mask_rcnn_small_tf1_soilsample_model.ipynb](test_Mask_rcnn_small_tf1_soilsample_model.ipynb) dargestellt und erläutert.
 
 ![Ergebnis nach Training mit 120 annottierten Bildern](README_Images/result_first_round_detection.png)
 
